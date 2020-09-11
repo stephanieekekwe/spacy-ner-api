@@ -20,8 +20,6 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:4200",
-    "http://localhost:3000",
-    "https://spacy-entity-recognition-api.herokuapp.com/ "
 ]
 
 app.add_middleware(
@@ -98,6 +96,3 @@ def recognize_entity(entity: Entity):
             return {'results': results, 'num_of_results': num_of_results}
     
     # return {'results': results, 'num_of_results': num_of_results}
-
-if  __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=5000)    
